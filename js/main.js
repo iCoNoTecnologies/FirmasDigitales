@@ -6,6 +6,19 @@
     /*==================================================================
     [ Validate ]*/
     var input = $('.validate-input .input100');
+    var fullHeight = function() {
+
+        $('.js-fullheight').css('height', $(window).height());
+        $(window).resize(function(){
+            $('.js-fullheight').css('height', $(window).height());
+        });
+
+    };
+    fullHeight();
+
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+  });
 
     $('.validate-form').on('submit',function(){
         var check = true;
