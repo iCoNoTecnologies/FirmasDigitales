@@ -31,7 +31,7 @@ border: 0px solid #000000;
 }
 </style>
 <body>
- <div class="transparente"></div>    
+   
 <h1>hola mundo</h1>
 </body>
 </html>

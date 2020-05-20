@@ -31,7 +31,7 @@ if(isset($_SESSION['usuario'])){
 ?>
 <html lang="en">
   <head>
-  	<title>Sidebar 09</title>
+  	<title>Firmas Digitales</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -40,26 +40,10 @@ if(isset($_SESSION['usuario'])){
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css">
   </head>
-  <script type="text/javascript">
-  	
-  	 $(document).ready(function(){
-	    		$('#C_documentos_firmados').click(function(){
-	       		$("#contenido").load("menu/documentos_firmados.php");
-	    									 });
+ 
+        
 
 
-	    		$('#C_documentos_recividos').click(function(){
-	       		$("#contenido").load("menu/documentos_recibidos.php");
-	    									 });
-
-	    		$('#C_inicio').click(function(){
-	       		$("#contenido").load("menu/inicio.php");
-	    									 });
-
-	    		$("#contenido").load("page_inicio.php");
-                        
-										});
-  </script>
   <style type="text/css">
   	
 .Fondo {
@@ -82,6 +66,43 @@ if(isset($_SESSION['usuario'])){
 }
 
   </style>
+  <script >
+  	  $(document).ready(function(){
+	    		$('#C_documentos_firmados').click(function(){
+	       		$("#contenido").load("menu/documentos_firmados.php");
+	    									 });
+
+
+	    		$('#C_documentos_recividos').click(function(){
+	       		$("#contenido").load("menu/documentos_recibidos.php");
+	    									 });
+
+	    		$('#C_inicio').click(function(){
+	       		$("#contenido").load("menu/page_inicio.php");
+	    									 });
+
+	    		$("#contenido").load("page_inicio.php");
+                        
+										});
+
+  </script> 
+   <script>
+	  var yes = document.getElementById("boton1");
+
+      function cerrarSesion(){
+  	 
+  
+          document.write('<?php  cerrar_sesion();  ?>');
+ 
+
+  
+      }
+       
+       
+     
+     
+
+      </script>
   <body>
 		<div class="Fondo">  
 
@@ -114,7 +135,7 @@ if(isset($_SESSION['usuario'])){
             <a href="#"><span class="fa fa-support mr-3"></span> Soporte</a>
           </li>
           <li>
-            <a onclick = "cerrarSesion();" ><span class="fa fa-sign-out mr-3"></span> Cerrar Sesion</a>
+            <a onclick = "cerrarSesion();" ><span class="fa fa-sign-out mr-3"></span> Cerrar Sesion 1</a>
 
           </li>
         </ul>
@@ -129,7 +150,7 @@ if(isset($_SESSION['usuario'])){
 				
 				<td >
 
-                   <div id ="contenido"></div>
+                   <div id ="#contenido"></div>
 
 				</td>
 			</tr>
@@ -144,27 +165,12 @@ if(isset($_SESSION['usuario'])){
  </div>
 
 
-
-    <script src="js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
-	  var yes = document.getElementById("boton1");
 
-      function cerrarSesion(){
-  	 
-  
-          document.write('<?php  cerrar_sesion();  ?>');
- 
-
-  
-      }
-
-     
-
-      </script>
   </body>
 </html>
 
